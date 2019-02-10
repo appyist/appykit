@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "524A19D01FC0516F0068819D"
-               BuildableName = "AppyKit.framework"
-               BlueprintName = "AppyKit"
+               BuildableName = "AppyKit_iOS.framework"
+               BlueprintName = "AppyKit-iOS"
                ReferencedContainer = "container:AppyKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,8 +46,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "524A19D01FC0516F0068819D"
-            BuildableName = "AppyKit.framework"
-            BlueprintName = "AppyKit"
+            BuildableName = "AppyKit_iOS.framework"
+            BlueprintName = "AppyKit-iOS"
             ReferencedContainer = "container:AppyKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,8 +64,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "524A19D01FC0516F0068819D"
-            BuildableName = "AppyKit.framework"
-            BlueprintName = "AppyKit"
+            BuildableName = "AppyKit_iOS.framework"
+            BlueprintName = "AppyKit-iOS"
             ReferencedContainer = "container:AppyKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
