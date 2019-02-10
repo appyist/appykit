@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AppyKit'
-  s.version          = '1.2'
+  s.version          = '1.3'
   s.summary          = 'UIKit Helpers.'
  
   s.description      = <<-DESC
@@ -17,6 +17,6 @@ UIKit helpers and design patterns
   s.resources = 'AppyKit/**/*.{xib,strings}'
   s.resource_bundles = {
       'PlacerholderXibs' => ['AppyKit/Protocols/StatableController/Default\ Placeholders/**/*.xib'],
-      'Localizations' => ['AppyKit/Resources/Localizables/*.strings']
+      'Localizations' => ['AppyKit/Resources/Localizables/*.lproj/*.{xib,strings}']
   }
 end
