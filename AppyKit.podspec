@@ -14,5 +14,6 @@ UIKit helpers and design patterns
  
   s.ios.deployment_target = '10.0'
   s.source_files = 'AppyKit/**/*.swift'
+  s.resources = 'AppyKit/**/*.{xib,strings}'
  
 end
