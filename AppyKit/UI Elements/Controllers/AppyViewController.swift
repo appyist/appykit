@@ -6,6 +6,7 @@
 //  Copyright © 2017 Appyist. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 @IBDesignable

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 private var interactiveNavigationBarHiddenAssociationKey: UInt8 = 0
 

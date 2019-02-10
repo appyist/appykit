@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public protocol NavigatableController {
     static var storyboardType: UIStoryboard.SBType { get }

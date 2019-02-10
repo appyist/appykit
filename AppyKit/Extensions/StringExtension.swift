@@ -51,7 +51,7 @@ public extension String {
         return String(first).uppercased() + dropFirst()
     }
     
-    public func localized(bundle: Bundle = Bundle(identifier: "ist.appy.AppyKit")!, tableName: String = "Localizable") -> String {
+    public func localized(bundle: Bundle = Bundle(for: AppyViewController.self), tableName: String = "Localizable") -> String {
         return NSLocalizedString(self, tableName: tableName, bundle: bundle, value: "**\(self)**", comment: "")
     }
 }

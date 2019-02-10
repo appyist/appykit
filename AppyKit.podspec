@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AppyKit'
-  s.version          = '1.4.1'
+  s.version          = '1.5'
   s.summary          = 'UIKit Helpers.'
  
   s.description      = <<-DESC
@@ -14,10 +14,5 @@ UIKit helpers and design patterns
  
   s.ios.deployment_target = '10.0'
   s.source_files = 'AppyKit/**/*.swift'
-  s.resource_bundles = {
-      'PlacerholderXibs' => ['AppyKit/Protocols/StatableController/Default\ Placeholders/LoadingPlaceholderView/*.xib',
-                             'AppyKit/Protocols/StatableController/Default\ Placeholders/ErrorPlaceholderView/*.xib',
-                             'AppyKit/Protocols/StatableController/Default\ Placeholders/EmptyPlaceholderView/*.xib'],
-      'Localizations' => ['AppyKit/Resources/Localizables/*.lproj/*.{xib,strings}']
-  }
+  s.resources = 'AppyKit/**/*.{xib,strings}'
 end

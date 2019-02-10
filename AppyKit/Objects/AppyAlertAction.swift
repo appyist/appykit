@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 // MARK: - Equatable Stubs
 public func == (lhs: AppyAlertAction , rhs: AppyAlertAction) -> Bool {

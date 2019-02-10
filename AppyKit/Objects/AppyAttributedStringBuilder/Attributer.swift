@@ -8,6 +8,9 @@
 /**
  The core of working with attributed strings
  */
+import Foundation
+import UIKit
+
 open class Attributer {
     
     /**
