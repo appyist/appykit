@@ -1,0 +1,14 @@
+/* 
+  Placeholder.strings
+  AppyKit
+
+  Created by Emirhan Erdogan on 12.08.2018.
+  Copyright © 2018 ilker. All rights reserved.
+*/
+
+/// StatableController
+"Nothing to Display" = "İçerik Bulunamadı";
+"There is no content available to display at this time." = "Şu an için gösterilecek hiçbir içerik bulunamadı.";
+
+"This Feed isn't Available" = "Bu Akış Kullanılabilir Değil";
+"There may be a problem with the server or network." = "Sunucu veya internet ile ilgili bir sorun olabilir.";

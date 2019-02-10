@@ -1,0 +1,15 @@
+/*
+ AlertControllerBuilder.strings
+ AppyKit
+ 
+ Created by Emirhan Erdogan on 12.07.2018.
+ Copyright © 2018 ilker. All rights reserved.
+ */
+
+/// No Access to Camera Alert
+"No access to camera." = "No access to camera.";
+"You can enable access in Privacy Settings." = "You can enable access in Privacy Settings.";
+
+/// No Access to Photo Library Alert
+"No access to your photos." = "No access to your photos.";
+"You can enable access in Privacy Settings." = "You can enable access in Privacy Settings.";

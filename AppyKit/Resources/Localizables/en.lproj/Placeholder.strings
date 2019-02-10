@@ -1,0 +1,14 @@
+/* 
+  Placeholder.strings
+  AppyKit
+
+  Created by Emirhan Erdogan on 12.08.2018.
+  Copyright © 2018 ilker. All rights reserved.
+*/
+
+/// StatableController
+"Nothing to Display" = "Nothing to Display";
+"There is no content available to display at this time." = "There is no content available to display at this time.";
+
+"This Feed isn't Available" = "This Feed isn't Available";
+"There may be a problem with the server or network." = "There may be a problem with the server or network.";
