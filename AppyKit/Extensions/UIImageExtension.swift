@@ -29,9 +29,9 @@ public extension UIImage {
         
         switch format {
         case .jpeg(let compression):
-            imageData = UIImageJPEGRepresentation(self, compression)
+            imageData = self.jpegData(compressionQuality: compression)
         case .png:
-            imageData = UIImagePNGRepresentation(self)
+            imageData = self.pngData()
         }
         
         return imageData?.base64EncodedString()

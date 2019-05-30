@@ -22,7 +22,7 @@ public extension UITableView {
     }
     
     // MARK: - Functions
-    func reloadDataWithAnimation(duration: TimeInterval, options: UIViewAnimationOptions = .curveEaseInOut) {
+    func reloadDataWithAnimation(duration: TimeInterval, options: UIView.AnimationOptions = .curveEaseInOut) {
         UIView.animate(withDuration: duration, delay: 0.0, options: options, animations: { self.alpha = 0.0 }, completion: nil)
         self.reloadData()
         UIView.animate(withDuration: duration, delay: 0.0, options: options, animations: { self.alpha = 1.0 }, completion: nil)

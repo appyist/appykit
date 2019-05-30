@@ -16,7 +16,7 @@ public protocol ImagePickable: class, UIImagePickerControllerDelegate, UINavigat
     var imageKey: String { get }
     var allowsEditing: Bool { get }
     var presenterController: UIViewController { get }
-    var sourceType: UIImagePickerControllerSourceType { get }
+    var sourceType: UIImagePickerController.SourceType { get }
     
     // MARK: - Functions
     func presentPhotoLibrary()
@@ -29,15 +29,15 @@ public extension ImagePickable {
     var allowsEditing: Bool {
         return true
     }
-    var sourceType: UIImagePickerControllerSourceType {
+    var sourceType: UIImagePickerController.SourceType {
         return .photoLibrary
     }
     var imageKey: String {
-        return allowsEditing ? UIImagePickerControllerEditedImage : UIImagePickerControllerOriginalImage
+        return allowsEditing ? convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.editedImage) : convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)
     }
     
     // MARK: - Functions
-    func imagePickerController(withSourceType type: UIImagePickerControllerSourceType) -> UIImagePickerController {
+    func imagePickerController(withSourceType type: UIImagePickerController.SourceType) -> UIImagePickerController {
         let controller = UIImagePickerController()
         controller.navigationBar.backIndicatorImage = nil
         controller.delegate = self
@@ -112,4 +112,9 @@ fileprivate extension AppyAlertControllerBuilder {
         
         return builder
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+	return input.rawValue
 }

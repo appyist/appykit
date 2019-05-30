@@ -20,7 +20,7 @@ public extension UIView {
         layer.mask = mask
     }
     
-    public func generateHapticFeedback(withStyle style: UIImpactFeedbackStyle) {
+    public func generateHapticFeedback(withStyle style: UIImpactFeedbackGenerator.FeedbackStyle) {
         if #available(iOS 10.0, *) {
             let feedbackGenerator = UIImpactFeedbackGenerator(style: style)
             feedbackGenerator.impactOccurred()

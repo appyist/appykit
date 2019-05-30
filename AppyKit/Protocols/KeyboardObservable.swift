@@ -14,15 +14,15 @@ public class KeyboardOptions: NSObject {
     // MARK: - Variables
     public var size: CGSize
     public var animationDuration: Double
-    public var animationCurve: UIViewAnimationOptions?
+    public var animationCurve: UIView.AnimationOptions?
     
     // MARK: - Life Cycle
     public init?(userInfo: [AnyHashable : Any]?) {
         guard let info = userInfo else { return nil }
         
-        size = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.size
-        animationDuration = info[UIKeyboardAnimationDurationUserInfoKey] as! Double
-        animationCurve = info[UIKeyboardAnimationCurveUserInfoKey] as? UIViewAnimationOptions
+        size = (info[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.size
+        animationDuration = info[UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
+        animationCurve = info[UIResponder.keyboardAnimationCurveUserInfoKey] as? UIView.AnimationOptions
     }
 }
 
@@ -34,8 +34,8 @@ public class KeyboardOptions: NSObject {
 extension KeyboardObservable {
     
     public func registerForKeyboardNotifications() {
-        let keyboardWillShowKey = Notification.Name.UIKeyboardWillShow
-        let keyboardWillHideKey = Notification.Name.UIKeyboardWillHide
+        let keyboardWillShowKey = UIResponder.keyboardWillShowNotification
+        let keyboardWillHideKey = UIResponder.keyboardWillHideNotification
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: keyboardWillShowKey, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: keyboardWillHideKey, object: nil)

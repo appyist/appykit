@@ -18,10 +18,10 @@ public struct AppyAlertAction: Hashable, Equatable {
     
     // MARK: - Properties
     public var title: String
-    public var style: UIAlertActionStyle
+    public var style: UIAlertAction.Style
     
     // MARK: - Life Cycle
-    public init(title: String, style: UIAlertActionStyle = .default) {
+    public init(title: String, style: UIAlertAction.Style = .default) {
         self.title = title
         self.style = style
     }

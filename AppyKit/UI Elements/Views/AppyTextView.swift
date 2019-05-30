@@ -51,22 +51,22 @@ open class AppyTextView: UITextView {
     // MARK:- Properties / Container Insets
     @IBInspectable public var topInset: CGFloat = 0.0 {
         didSet {
-            textContainerInset = UIEdgeInsetsMake(topInset, textContainerInset.left, textContainerInset.bottom, textContainerInset.right)
+            textContainerInset = UIEdgeInsets.init(top: topInset, left: textContainerInset.left, bottom: textContainerInset.bottom, right: textContainerInset.right)
         }
     }
     @IBInspectable public var bottomInset: CGFloat = 0 {
         didSet {
-            textContainerInset = UIEdgeInsetsMake(textContainerInset.top, textContainerInset.left, bottomInset, textContainerInset.right)
+            textContainerInset = UIEdgeInsets.init(top: textContainerInset.top, left: textContainerInset.left, bottom: bottomInset, right: textContainerInset.right)
         }
     }
     @IBInspectable public var leftInset: CGFloat = 0 {
         didSet {
-            textContainerInset = UIEdgeInsetsMake(textContainerInset.top, leftInset, textContainerInset.bottom, textContainerInset.right)
+            textContainerInset = UIEdgeInsets.init(top: textContainerInset.top, left: leftInset, bottom: textContainerInset.bottom, right: textContainerInset.right)
         }
     }
     @IBInspectable public var rightInset: CGFloat = 0 {
         didSet {
-            textContainerInset = UIEdgeInsetsMake(textContainerInset.top, textContainerInset.left, textContainerInset.bottom, rightInset)
+            textContainerInset = UIEdgeInsets.init(top: textContainerInset.top, left: textContainerInset.left, bottom: textContainerInset.bottom, right: rightInset)
         }
     }
     
@@ -118,7 +118,7 @@ open class AppyTextView: UITextView {
     }
     
     deinit {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UITextViewTextDidChange, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UITextView.textDidChangeNotification, object: nil)
     }
     
     // MARK:- Functions
@@ -128,7 +128,7 @@ open class AppyTextView: UITextView {
     }
     
     private func prepareForUse() {
-        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: NSNotification.Name.UITextViewTextDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: UITextView.textDidChangeNotification, object: nil)
         
         placeholderLabel.font = font
         placeholderLabel.textColor = placeholderColor

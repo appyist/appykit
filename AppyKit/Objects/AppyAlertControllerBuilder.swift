@@ -20,20 +20,20 @@ public class AppyAlertControllerBuilder {
     public var title: String?
     public var message: String?
     public var actions: [AppyAlertAction]!
-    public var style: UIAlertControllerStyle!
+    public var style: UIAlertController.Style!
     var textField: UITextField? {
         return alertController.textFields?[safe: 0]
     }
     
     // MARK: - Life Cycle
-    public init(title: String? = nil, message: String? = nil, actions: [AppyAlertAction], style: UIAlertControllerStyle) {
+    public init(title: String? = nil, message: String? = nil, actions: [AppyAlertAction], style: UIAlertController.Style) {
         self.title = title
         self.message = message
         self.actions = actions
         self.style = style
     }
     
-    public convenience init(style: UIAlertControllerStyle) {
+    public convenience init(style: UIAlertController.Style) {
         self.init(actions: [.done], style: style)
     }
     
@@ -50,7 +50,7 @@ public class AppyAlertControllerBuilder {
             let actionTitle = current.title
             let actionStyle = current.style
             let alertAction = UIAlertAction(title: actionTitle, style: actionStyle, handler: { (receivedAction) in
-                guard let selectedIndex = self.alertController.actions.index(of: receivedAction) else { return }
+                guard let selectedIndex = self.alertController.actions.firstIndex(of: receivedAction) else { return }
                 let selectedAction = self.actions[selectedIndex]
                 completion?(selectedAction, self.textField?.text)
             })

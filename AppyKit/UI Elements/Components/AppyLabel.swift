@@ -32,7 +32,7 @@ open class AppyLabel: UILabel {
         let labelTextSize = (labelText as NSString).boundingRect(
             with: CGSize(width: frame.size.width, height: .greatestFiniteMagnitude),
             options: .usesLineFragmentOrigin,
-            attributes: [NSAttributedStringKey.font: font],
+            attributes: [NSAttributedString.Key.font: font],
             context: nil).size
         return labelTextSize.height > bounds.size.height
     }
@@ -62,6 +62,6 @@ open class AppyLabel: UILabel {
         let insets: UIEdgeInsets = UIEdgeInsets(top: self.topInset, left: self.leftInset, bottom: self.bottomInset, right: self.rightInset)
         self.setNeedsLayout()
         
-        return super.drawText(in: UIEdgeInsetsInsetRect(rect, insets))
+        return super.drawText(in: rect.inset(by: insets))
     }
 }

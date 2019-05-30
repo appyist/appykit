@@ -30,7 +30,7 @@ open class AppyButton: UIButton {
     private var normalBackgroundColor: UIColor!
     private var highlightedBackgroundColor: UIColor!
     private lazy var activityIndicatorView: UIActivityIndicatorView = {
-        let activityView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        let activityView = UIActivityIndicatorView(style: .gray)
         activityView.translatesAutoresizingMaskIntoConstraints = false
         activityView.hidesWhenStopped = true
         
