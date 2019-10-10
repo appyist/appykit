@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AppyKit'
-  s.version          = '1.7'
+  s.version          = '1.8'
   s.summary          = 'UIKit Helpers.'
  
   s.description      = <<-DESC
